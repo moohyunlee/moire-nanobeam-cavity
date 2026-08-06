@@ -1,118 +1,127 @@
-# 2D Moiré Nanobeam Cavity
-*GaAs moiré nanobeam cavity
-with Q–confinement optimization and emitter-placement tolerance*
+# Position-Selectable Modes in a 2D Moiré Nanobeam Cavity
+*Independent 2D computational investigation of registry-controlled mode localization, in-plane leakage, and interface tuning in a three-row GaAs moiré nanobeam*
 
-## Project Summary
-This independent project investigates a commensurate 13:14 three-row GaAs moiré nanobeam cavity. The goal was to identify a design that balances $Q$, effective area, central confinement, and emitter-placement tolerance. Sequential optimization increased the screening-stage $Q$ from approximately $1.0\times10^3$ to $8.0\times10^3$ at resolution 32, while a resolution 52 yielded $7.5\times10^3$ for selected M19 design.
+> **Main result**: In a two-dimensional, $z$-invariant model, shifting the central B row from $\delta = -0.3a_A$ to $+0.3a_A$ selected approximately mirror-related modes localized at opposite longitudinal positions. The best-performing sampled M19 design yielded $Q\approx1.0\times10^4$ at a resolution of 52 pixels per $a_A$.
 
-### Key Findings
-- Increased the simulated 2D cavity $Q$ from $\approx1.0\times10^3$ to $\approx8.0\times10^3$ at resolution 32.
-- Obtained a high-resolution M17 estimate of $Q \approx6.6\times10^3$ at resolution 52.
-- Selected M17 over the maximum-$Q$ M19 design because of its smaller effective area and stronger central confinement.
-- Found that 75% of accessible GaAs positions within approximately 20 nm of the optimal emitter location retained $\eta_y\ge0.5$.
+Technical note: [PDF Download](./technical_note/technical_note.pdf)
 
-## Geometry
+## Key Findings
+- MPB eigensolver calculations identified TE-like folded bands 93-95 within the target normalized frequency window (0.288100–0.29450).
+- Meep FDTD simulation found a resonance with $Q\approx1\times10^3$ for the initial moiré cavity design, which increased to $Q\approx1\times10^4$ through hole-radius optimization, extended BBB mirrors, and local transition-hole tuning.
+- Opposite shifts generated symmetry-related modes with nearly identical $Q$ and localization, allowing selection of the mode position.
+- Local interface refinement changed cavity leakage while leaving the resonance frequency and other mode metrics nearly unchanged.
+
+## Result Summary
+
+A commensurate 13:14 three-row GaAs moiré nanobeam was studied using MPB eigenmode analysis and Meep finite-difference time-domain simulations.
+
+### $Q$ optimization
+
+| Stage | Configuration | $Q$ | Normalized frequency $(a/\lambda)$ |
+|:---|:---|---:|---:|
+| Initial finite moiré cavity | ABA cavity | 1044 | 0.284291 |
+| Radius-optimized mirror | $M=7$, $r_m/r_0=1.04$ | 2141 | 0.284275 |
+| Offset- and transition-optimized | $M=7$, $\delta=+0.30a$ | 4087 | 0.285522 |
+| Extended mirror | $M=19$ | 8856 | 0.285571 |
+| Locally tuned M19 cavity | $\delta=+0.30a$, $r_t/a=0.298571$ | 10299 | 0.285850 |
+
+*The table summarizes the optimization trajectory rather than a controlled single-parameter sweep. The final design was evaluated at resolution 52.*
+
+Extended mirrors and radius optimization reduced in-plane leakage and improved the resonance $Q$. As a result, $Q$ increased by approximately 9.9 times compared with the initial design.
+
+In the separate mirror-length comparison, M27 produced a higher $Q$ than M19, but M19 was selected because it maintained stronger moiré-cell confinement and a smaller effective area.
+
+### Moiré Offset Selection
 <p align="center">
-  <img src="figures/mpb/geometry.png" width="700">
+  <img src="figures/meep/moire_cell_offset.png" width="1500">
 </p>
 
 <p align="center">
-  <em>Commensurate 13:14 three-row ABA moiré supercell</em>
-</p>
-
-- The cavity consists of a three-row ABA region with $a_B=(13/14)a_A$, forming a commensurate supercell satisfying $13a_A=14a_B$.
-- The finite moiré region is terminated by BBB mirror sections on both sides.
-- Scaling the selected normalized resonance to 930 nm gives $a_A\approx266$ nm for GaAs with $\varepsilon_r=13$.
-
-## MPB Mode Screening
-<p align="center">
-  <img src="figures/mpb/target_bandgap.png" width="500">
+  <em>Dependence of Q, moire  cell confinement, effective area, and normalized frequency on the central B-row offset</em>
 </p>
 
 <p align="center">
-  <em>TE-like bands 93-95 near the target normalized-frequency range</em>
+  <img src="figures/meep/offset_p0p0_e_profile.png" width="450">
 </p>
 
 <p align="center">
-  <img src="figures/mpb/aba_band93_gamma.png" width="500">
+  <em>Normalized ε|E|^2 profile at offset 0</em>
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="figures/meep/offset_m0p3_e_profile.png" width="100%" alt="Ey profile, offset -0.3"><br>
+      <em>Normalized ε|E|^2 profile at offset offset −0.3</em>
+    </td>
+    <td align="center">
+      <img src="figures/meep/offset_p0p3_e_profile.png" width="100%" alt="Ey profile, offset +0.3"><br>
+      <em>Normalized ε|E|^2 profile at offset offset +0.3</em>
+    </td>
+  </tr>
+</table>
+
+In the offset comparison, shifting the center row of the moiré cell by $\delta=\pm0.3a$ produced symmetry-related modes localized at opposite positions while maintaining $Q\approx7.5\times10^3$. In the idealized 2D model, this result indicates that the localized mode position can be selected by defining the relative row registry during fabrication.
+
+### Local transition mirror radius $r_t$
+<p align="center">
+  <img src="figures/meep/interface_radius_dependence.png" width="1500">
 </p>
 
 <p align="center">
-  <em>Magnetic-field profile of band 93 at the Gamma point, showing confinement within the moiré region </em>
+  <em>Dependence of Q, frequency, effective area, and moiré-cell confinment on the transition-hole radius</em>
 </p>
 
-- MPB was used to identify a narrow TE-like folded-band candidate in the periodic 13:14 ABA supercell. Band 93 exhibited a field profile confined within the moiré region at $\Gamma$ and the Brillouin-zone edge.
-- The $H_z$ profiles were used for band screening; the finite-cavity and emitter-placement metrics below were evaluated using $E_y$.
+To investigate the effect of the interface region (border between the moiré cell and transition mirror), the radius of one transition hole ($r_t$) was varied. As a result, the $Q$ factor changed depending on $r_t$, whereas other metrics remained nearly unchanged. The result indicates that the local interface region controls a leakage-sensitive dielectric-boundary perturbation. The resulting geometry variation changed the cavity $Q$ by approximately 23% while producing only a 0.014% shift in normalized resonance frequency.
 
-## 2D Meep Optimization
+## Workflow
+**Method** MPB was first used to identify candidate TE-like folded bands and field symmetries in the periodic ABA supercell. The selected candidates were then transferred to finite moiré structures and tested through FDTD optimization and numerical convergence.
+
+1. **MPB Mode Screening**
+Identify folded-band candidates and relevant field symmetries in the periodic ABA supercell.
 <p align="center">
-  <img src="figures/meep/q_progression.png" width="500">
-</p>
-
-<p align="center">
-  <em>Optimization-stage Q progression</em>
-</p>
-
-- A finite ABA cavity was formed by adding BBB mirrors on both sides.
-- The mirror-hole radius, central B-row offset, transition-hole radius, and mirror length were optimized sequentially, increasing $Q$ from approximately $1.0\times10^3$ to $8.8\times10^3$ at a resolution of 32 pixels per unit length.
-
-## Candidate Comparison
-<p align="center">
-  <img src="figures/meep/m15_m17_m19_eta_map.png" width="800">
+  <img src="figures/mpb/target_bandgap.png" width="750">
 </p>
 <p align="center">
-  Normalized y-oriented dipole-coupling maps for the M15, M17, and M19 cavity candidates
+  <em>TE-like bands 93-95 near the target normalized-frequency range (0.288100–0.29450)</em>
 </p>
 
-Here, $\eta_y(\mathbf{r})$ denotes the normalized local $E_y$-energy-density proxy, $A_{\mathrm{eff},y}^{(2D)}/a_A^2$ the normalized effective area, and $C_{\mathrm{moire}}$ the fraction of GaAs-weighted $E_y$ intensity within the central moiré region.
-
-|Candidate|$Q$|$A_{\mathrm{eff},y}^{(2D)}/a_A^2$|$Q/(A_{\mathrm{eff},y}^{(2D)}/a_A^2)$|$C_{\mathrm{moire}}$|
-|:---|---:|---:|---:|--:|
-|M17|6600|1.017|6491|0.897|
-|M19|7472|1.065|7014|0.869|
-|M21|7174|1.155|6213|0.822|
-
-All candidates were evaluated using identical screening settings at a resolution 52 pixels per unit length.
-
-Although M19 increased $Q$ by approximately 13.2% with respect to M17, $C_{\mathrm{moire}}$ decreased from 0.897 to 0.869. M17 was therefore selected as the better Q-confinement compromise.
-
-## Resolution study
-|Resolution|Frequency|Q|Post-source runtime|
-|:---|---:|---:|---:|
-|36|0.2856|7481|6000|
-|40|0.2859|6609|6000|
-|44|0.2861|6755|6000|
-|48|0.2859|7440|6000|
-|52|0.2859|7472|6000|
-
-- The resonance frequency varied by less than 0.2% across the tested
-  resolutions.
-- The Q estimates at resolutions 48 and 52 differed by approximately 0.4%,
-  suggesting stabilization near $Q \approx7.5\times10^3%$ 
-
-## Placement Robustness
+2. **Finite-Cavity Validation**
+Transfer candidate modes to Meep and check $Q$, localization, and numerical convergence.
 <p align="center">
-  <img src="figures/meep/M19_radial_placement_robustness.png" width="500">
+  <img src="figures/meep/initial_design_ey_intensity.png" width="500">
 </p>
 <p align="center">
-  Radial statistics of the normalized coupling proxy over accessible
-  GaAs positions around the optimal emitter location
+  <em> Ey profile of the initial design</em>
 </p>
 
-- Under a uniform in-plane placement model over accessible GaAs positions, the estimated half-coupling tolerance was $R_{75}^{(0.5)}\approx37.5$ nm; that is, 75% of positions within this radius retained $\eta_y\ge0.5$.
+3. **Further Optimization** 
+To enhance $Q$ while maintaining localization
+  <p align="center">
+  <img src="figures/meep/offset_gap_p0p02_q_engineered.png" width="500">
+</p>
+
+<p align="center">
+  <em>M19 - Offset and mirror engineered geometry</em>
+</p>
+
+4. **Investigate Characteristics**
+Compare zero and nonzero offsets, then vary one local interface hole at fixed offset to separate registry effects from local interface-leakage effects.
 
 ## Limitations
 - The primary optimization was performed using a 2D z-invariant model and therefore does not capture out-of-plane radiation; systematic 3D convergence remains future work.
-- The placement analysis assumes a resonant, $y$-oriented dipole.
+- The quantum-emitter placement interpretation assumes a resonant, $y$-oriented dipole; an explicit dipole-position or Purcell-factor sweep was not performed.
 - Fabrication-disorder analysis and a matched conventional-cavity benchmark remain future work.
 
 ## Repository Structure
 - code/       MPB and Meep simulation workflows
-- figures/    geometry, fields, optimization, and robustness results
+- figures/    geometry, fields, and optimization
 - data/       processed numerical results
 
 ## Reproduce
+The full-resolution R=52 run is computationally expensive and may require several hours, depending on hardware.
 ```bash
 conda env create -f environment.yml
-conda activate moire-cavity
+conda activate moire_cavity
+python code/Meep/final_design_moire.py
 ```

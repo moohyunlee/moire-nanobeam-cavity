@@ -1,0 +1,10 @@
+name: moire_cavity
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pymeep
+  - h5py
+  - numpy
+  - matplotlib
+  - pandas

@@ -1,0 +1,66 @@
+ABA 13A-14B resolution 32 E-field / H-field check
+======================================================================
+
+Lx = 13.0
+Ly = 5.0
+resolution = 32
+num_bands = 120
+candidate_bands = [93, 94]
+center region = |x| < 2.0 a_A
+
+Band 93 at gamma
+  frequency = 0.288872
+  H beam fraction = 0.9526
+  H center fraction = 0.7679
+  H IPR = 1.794541e-04
+  E GaAs energy fraction = 0.8722
+  E center GaAs fraction = 0.6762
+  Ex energy fraction = 0.5286
+  Ey energy fraction = 0.4714
+  Ez energy fraction = 0.0000
+  Global E hotspot = air
+  GaAs hotspot ratio = 0.6467
+  GaAs hotspot position = (-0.743, 0.781)
+
+Band 94 at gamma
+  frequency = 0.291335
+  H beam fraction = 0.8908
+  H center fraction = 0.4584
+  H IPR = 9.522561e-05
+  E GaAs energy fraction = 0.8268
+  E center GaAs fraction = 0.3660
+  Ex energy fraction = 0.4294
+  Ey energy fraction = 0.5706
+  Ez energy fraction = 0.0000
+  Global E hotspot = air
+  GaAs hotspot ratio = 0.7413
+  GaAs hotspot position = (0.000, -0.688)
+
+Band 93 at zone_edge
+  frequency = 0.289325
+  H beam fraction = 0.9543
+  H center fraction = 0.8555
+  H IPR = 2.436077e-04
+  E GaAs energy fraction = 0.8699
+  E center GaAs fraction = 0.7495
+  Ex energy fraction = 0.5336
+  Ey energy fraction = 0.4664
+  Ez energy fraction = 0.0000
+  Global E hotspot = air
+  GaAs hotspot ratio = 0.6504
+  GaAs hotspot position = (-0.743, -0.781)
+
+Band 94 at zone_edge
+  frequency = 0.292570
+  H beam fraction = 0.8184
+  H center fraction = 0.5643
+  H IPR = 8.429375e-05
+  E GaAs energy fraction = 0.7680
+  E center GaAs fraction = 0.4212
+  Ex energy fraction = 0.4303
+  Ey energy fraction = 0.5697
+  Ez energy fraction = 0.0000
+  Global E hotspot = air
+  GaAs hotspot ratio = 0.7997
+  GaAs hotspot position = (0.000, -0.688)
+

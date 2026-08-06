@@ -1,0 +1,19 @@
+Band 93 at zone_edge
+beam fraction   = 0.9543
+center fraction = 0.8563
+IPR             = 1.095236e-04
+saved: aba_band93_zone_edge.png
+
+Band 94 at zone_edge
+beam fraction   = 0.8177
+center fraction = 0.5652
+IPR             = 3.787223e-05
+saved: aba_band94_zone_edge.png
+
+Band 95 at zone_edge
+beam fraction   = 0.8244
+center fraction = 0.6584
+IPR             = 3.548339e-05
+saved: aba_band95_zone_edge.png
+
+Elapsed run time = 63584.7383 s

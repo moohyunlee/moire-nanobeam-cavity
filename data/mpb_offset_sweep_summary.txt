@@ -1,0 +1,26 @@
+ABA 13A-14B offset sweep summary
+
+resolution = 32
+candidate bands = [93, 94, 95]
+target window = 0.288100 ~ 0.294500
+target center = 0.291613
+center region = |x| < 2.00 a_A
+
+offset=0.00, band=93, avg_freq=0.289098, bandwidth_2pt=4.527202e-04, avg_beam=0.9536, avg_center=0.8117, avg_ipr=2.1142e-04, loc_score=0.7740, target_error=2.514725e-03
+offset=0.00, band=94, avg_freq=0.291953, bandwidth_2pt=1.235467e-03, avg_beam=0.8544, avg_center=0.5112, avg_ipr=8.9709e-05, loc_score=0.4368, target_error=3.397344e-04
+offset=0.00, band=95, avg_freq=0.293336, bandwidth_2pt=8.538261e-04, avg_beam=0.8706, avg_center=0.6631, avg_ipr=9.2309e-05, loc_score=0.5772, target_error=1.722811e-03
+offset=0.10, band=93, avg_freq=0.289100, bandwidth_2pt=4.544883e-04, avg_beam=0.9533, avg_center=0.6706, avg_ipr=2.0931e-04, loc_score=0.6392, target_error=2.512568e-03
+offset=0.10, band=94, avg_freq=0.291951, bandwidth_2pt=1.231923e-03, avg_beam=0.8545, avg_center=0.4816, avg_ipr=8.5617e-05, loc_score=0.4116, target_error=3.381176e-04
+offset=0.10, band=95, avg_freq=0.293340, bandwidth_2pt=8.530359e-04, avg_beam=0.8708, avg_center=0.5203, avg_ipr=9.7945e-05, loc_score=0.4530, target_error=1.727169e-03
+offset=0.20, band=93, avg_freq=0.289094, bandwidth_2pt=4.533081e-04, avg_beam=0.9533, avg_center=0.2038, avg_ipr=2.1088e-04, loc_score=0.1943, target_error=2.518552e-03
+offset=0.20, band=94, avg_freq=0.291963, bandwidth_2pt=1.227741e-03, avg_beam=0.8544, avg_center=0.3084, avg_ipr=8.8245e-05, loc_score=0.2635, target_error=3.496882e-04
+offset=0.20, band=95, avg_freq=0.293346, bandwidth_2pt=8.488227e-04, avg_beam=0.8705, avg_center=0.3169, avg_ipr=9.4418e-05, loc_score=0.2759, target_error=1.732616e-03
+offset=0.30, band=93, avg_freq=0.289097, bandwidth_2pt=4.527367e-04, avg_beam=0.9534, avg_center=0.0866, avg_ipr=2.1075e-04, loc_score=0.0825, target_error=2.515767e-03
+offset=0.30, band=94, avg_freq=0.291951, bandwidth_2pt=1.230101e-03, avg_beam=0.8546, avg_center=0.2173, avg_ipr=8.8204e-05, loc_score=0.1857, target_error=3.385069e-04
+offset=0.30, band=95, avg_freq=0.293339, bandwidth_2pt=8.507525e-04, avg_beam=0.8706, avg_center=0.1413, avg_ipr=9.4373e-05, loc_score=0.1230, target_error=1.726028e-03
+offset=0.40, band=93, avg_freq=0.289097, bandwidth_2pt=4.530553e-04, avg_beam=0.9534, avg_center=0.0539, avg_ipr=2.0950e-04, loc_score=0.0514, target_error=2.515972e-03
+offset=0.40, band=94, avg_freq=0.291950, bandwidth_2pt=1.231425e-03, avg_beam=0.8544, avg_center=0.1435, avg_ipr=8.5573e-05, loc_score=0.1226, target_error=3.369060e-04
+offset=0.40, band=95, avg_freq=0.293337, bandwidth_2pt=8.532110e-04, avg_beam=0.8707, avg_center=0.1054, avg_ipr=9.7847e-05, loc_score=0.0918, target_error=1.724533e-03
+offset=0.50, band=93, avg_freq=0.289095, bandwidth_2pt=4.519157e-04, avg_beam=0.9535, avg_center=0.0484, avg_ipr=2.1162e-04, loc_score=0.0461, target_error=2.518068e-03
+offset=0.50, band=94, avg_freq=0.291949, bandwidth_2pt=1.231598e-03, avg_beam=0.8545, avg_center=0.1414, avg_ipr=8.9757e-05, loc_score=0.1208, target_error=3.356517e-04
+offset=0.50, band=95, avg_freq=0.293331, bandwidth_2pt=8.534236e-04, avg_beam=0.8706, avg_center=0.0931, avg_ipr=9.2290e-05, loc_score=0.0810, target_error=1.718482e-03
