@@ -52,11 +52,11 @@ In the separate mirror-length comparison, M27 produced a higher $Q$ than M19, bu
   <tr>
     <td align="center">
       <img src="figures/meep/offset_m0p3_e_profile.png" width="100%" alt="Ey profile, offset -0.3"><br>
-      <em>Normalized ε|E|^2 profile at offset offset −0.3</em>
+      <em>Normalized ε|E|^2 profile at offset −0.3</em>
     </td>
     <td align="center">
       <img src="figures/meep/offset_p0p3_e_profile.png" width="100%" alt="Ey profile, offset +0.3"><br>
-      <em>Normalized ε|E|^2 profile at offset offset +0.3</em>
+      <em>Normalized ε|E|^2 profile at offset +0.3</em>
     </td>
   </tr>
 </table>
@@ -69,7 +69,7 @@ In the offset comparison, shifting the center row of the moiré cell by $\delta=
 </p>
 
 <p align="center">
-  <em>Dependence of Q, frequency, effective area, and moiré-cell confinment on the transition-hole radius</em>
+  <em>Dependence of Q, frequency, effective area, and moiré-cell confinement on the transition-hole radius</em>
 </p>
 
 To investigate the effect of the interface region (border between the moiré cell and transition mirror), the radius of one transition hole ($r_t$) was varied. As a result, the $Q$ factor changed depending on $r_t$, whereas other metrics remained nearly unchanged. The result indicates that the local interface region controls a leakage-sensitive dielectric-boundary perturbation. The resulting geometry variation changed the cavity $Q$ by approximately 23% while producing only a 0.014% shift in normalized resonance frequency.
