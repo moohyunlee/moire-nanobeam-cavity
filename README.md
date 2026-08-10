@@ -1,4 +1,4 @@
-# Position-Selectable Modes in a 2D Moiré Nanobeam Cavity
+# Lattice-Offset Control of Mode Localization in a Finite Moiré Nanobeam Cavity
 *Independent 2D computational investigation of registry-controlled mode localization, in-plane leakage, and interface tuning in a three-row GaAs moiré nanobeam*
 
 > **Main result**: In a two-dimensional, $z$-invariant model, shifting the central B row from $\delta = -0.3a_A$ to $+0.3a_A$ selected approximately mirror-related modes localized at opposite longitudinal positions. The best-performing sampled M19 design yielded $Q\approx1.0\times10^4$ at a resolution of 52 pixels per $a_A$.
